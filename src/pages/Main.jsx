@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import CameraSelector from '../components/CameraSelector'; // 기존 카메라 선택 컴포넌트
 import FarmSelector from '../components/FarmSelector'; // 새로운 농가 선택 컴포넌트
+import Push from '../components/Push';
 
 function Main() {
   const user_id = sessionStorage.getItem('user_id'); // 로그인한 사용자 ID
@@ -61,6 +62,9 @@ function Main() {
             <p>'카메라 관리' 메뉴에서 농가와 카메라를 추가해주세요.</p>
           )}
         </CameraFeed>
+        <PushContainer>
+          <Push></Push>
+        </PushContainer>
       </Content>
     </MainContainer>
   );
